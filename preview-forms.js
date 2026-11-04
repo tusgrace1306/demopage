@@ -1,0 +1,2 @@
+/* Local preview only. No contact data is sent or persisted. */
+document.querySelectorAll('form').forEach(function(form){form.addEventListener('submit',function(event){event.preventDefault();var status=form.querySelector('[role="status"]');if(!status){status=document.createElement('p');status.setAttribute('role','status');form.appendChild(status)}status.textContent='Design preview only — no information has been sent. Use the live inquiry page to contact our team.'})});

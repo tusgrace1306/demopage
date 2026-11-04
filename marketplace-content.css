@@ -1,0 +1,21 @@
+/* Content-specific additions only. Original site CSS is copied unchanged. */
+.content-listing-wrap{height:640px}.content-listing{width:440px;max-width:100%;left:8%;top:20px}.content-listing .ir-agent-message-you{margin-left:0}.content-listing .ir-candidate-row{padding:10px 12px}.cv-row-content{flex:1;min-width:0}.cv-row-actions{display:flex;gap:8px;margin-top:8px}.ir-page .cv-row-actions a{padding:5px 12px;border:1px solid #e9ebf2;border-radius:999px;font-size:11px;font-weight:700;color:#3b82f6}.ir-page .cv-row-actions a:last-child{background:#0f1230;color:white;border-color:#0f1230}.listing-caption{font-size:12px;color:#5b6178;margin-top:16px!important;text-align:center}.content-market-listing .content-listing{left:5%;top:0}.content-market-listing{min-height:640px}.content-recruiter-band{margin-bottom:0}.content-recruiter-band h2{max-width:850px;margin-left:auto;margin-right:auto}.content-terms{text-align:center;margin-top:28px!important;color:#5b6178;font-size:14px}.air-module-copy>p+p{margin-top:18px!important}.preview-form-status{font-size:12px;margin-top:12px!important}.air-form-grid label{font-size:12px;font-weight:700;display:grid;gap:7px}.air-form-grid select{font:inherit}.air-page .air-trust-section{align-items:start}.ir-page [hidden]{display:none!important}
+/* Header legibility revision: preserve layout and brand background. */
+.ir-navbar .ir-nav-links a{color:#fff!important;font-weight:700;opacity:1;text-shadow:0 1px 2px rgba(15,18,48,.22)}
+.ir-navbar>.ir-logo{text-shadow:0 1px 2px rgba(15,18,48,.18)}
+/* Approved readability adjustments; all original animations remain active. */
+.ir-page .ir-hero .ir-headline,.ir-page .ir-hero .ir-headline span{color:#fff;background:none;-webkit-text-fill-color:#fff;text-shadow:none}
+.ir-page .ir-hero .ir-subtext{color:#fff;font-weight:500}
+.ir-page .ir-hero .content-listing .ir-candidate-meta,.ir-page .ir-hero .listing-caption{color:#334155}
+.ir-page .ir-hero .content-listing .ir-candidate-name{color:#0f1230}
+
+
+/* Four steps now fit the original product workflow grid. */
+.air-page .marketplace-four-step-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.marketplace-service-cta{margin-top:24px!important}
+.marketplace-tranches{margin-top:18px!important}
+.ir-page .content-listing .ir-agent-label{font-size:12px}
+@media(max-width:900px){.air-page .marketplace-four-step-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){.air-page .marketplace-four-step-grid{grid-template-columns:1fr}}
+/* Reuse the original homepage dark-button treatment for product-page CTAs. */
+.air-page .ir-button-dark,.marketplace-service-cta .air-button-dark{color:#fff!important;background:var(--ir-ink)}
