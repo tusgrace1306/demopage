@@ -19,3 +19,106 @@
 @media(max-width:680px){.air-page .marketplace-four-step-grid{grid-template-columns:1fr}}
 /* Reuse the original homepage dark-button treatment for product-page CTAs. */
 .air-page .ir-button-dark,.marketplace-service-cta .air-button-dark{color:#fff!important;background:var(--ir-ink)}
+
+/* Reuse the homepage paired CTA layout and sliding active state on Marketplace. */
+.air-page .ir-final-cta .ir-dual-cta {
+	max-width: 590px;
+	align-items: stretch;
+	gap: 6px;
+}
+
+.air-page .ir-final-cta .ir-dual-cta > a {
+	display: flex;
+	min-width: 0;
+	min-height: 46px;
+	padding: 10px 18px;
+	border-radius: 999px;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	flex: 1 1 50%;
+	overflow-wrap: anywhere;
+	text-align: center;
+	font-size: 13px;
+	font-weight: 800;
+	line-height: 1.3;
+	color: var(--ir-ink) !important;
+}
+
+.air-page .ir-final-cta .ir-dual-cta > a:last-child {
+	color: #fff !important;
+	background: var(--ir-ink);
+}
+
+.air-page .ir-final-cta .ir-dual-cta > a span[aria-hidden="true"] {
+	display: inline-block;
+	transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.air-page .ir-final-cta .ir-dual-cta > a:hover span[aria-hidden="true"] {
+	transform: translateX(4px);
+}
+
+
+.air-page .ir-final-cta .ir-dual-cta > a{position:relative;overflow:hidden;isolation:isolate;transition:transform 260ms cubic-bezier(.22,1,.36,1),box-shadow 260ms cubic-bezier(.22,1,.36,1),background-color 220ms ease,filter 220ms ease}
+.air-page .ir-final-cta .ir-dual-cta > a:focus-visible{outline:3px solid rgba(56,189,248,.55);outline-offset:3px}
+.air-page .ir-final-cta .ir-dual-cta > a:active{box-shadow:0 6px 14px rgba(15,18,48,.16);transform:translateY(0) scale(.98)}
+@media(max-width:1100px){.air-page .ir-final-cta .ir-dual-cta{max-width:100%;border-radius:24px;flex-direction:column;align-items:stretch}.air-page .ir-final-cta .ir-dual-cta > a{width:100%;flex:0 0 auto}}
+/* Sliding active state for the paired hero and final CTA actions. */
+@media (hover: hover) and (pointer: fine) and (min-width: 1101px) {
+	.air-page .ir-final-cta .ir-dual-cta {
+		position: relative;
+		overflow: hidden;
+		isolation: isolate;
+	}
+
+	.air-page .ir-final-cta .ir-dual-cta::before {
+		position: absolute;
+		top: 6px;
+		bottom: 6px;
+		left: 6px;
+		z-index: 0;
+		width: calc((100% - 18px) / 2);
+		border-radius: 999px;
+		content: "";
+		pointer-events: none;
+		background: var(--ir-ink);
+		box-shadow: 0 8px 18px rgba(15, 18, 48, 0.18);
+		transform: translateX(calc(100% + 6px));
+		transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+	}
+
+	.air-page .ir-final-cta .ir-dual-cta > a {
+		z-index: 1;
+		color: var(--ir-ink) !important;
+		background: transparent;
+		box-shadow: none;
+		filter: none;
+		transform: none;
+		transition: color 220ms ease;
+	}
+
+	.air-page .ir-final-cta .ir-dual-cta > a:last-child {
+		color: #fff !important;
+		background: transparent;
+	}
+
+	.air-page .ir-final-cta .ir-dual-cta > a::after {
+		display: none;
+	}
+
+	.air-page .ir-final-cta .ir-dual-cta:has(> a:first-child:hover)::before,
+	.air-page .ir-final-cta .ir-dual-cta:has(> a:first-child:focus-visible)::before {
+		transform: translateX(0);
+	}
+
+	.air-page .ir-final-cta .ir-dual-cta:has(> a:first-child:hover) > a:first-child,
+	.air-page .ir-final-cta .ir-dual-cta:has(> a:first-child:focus-visible) > a:first-child {
+		color: #fff !important;
+	}
+
+	.air-page .ir-final-cta .ir-dual-cta:has(> a:first-child:hover) > a:last-child,
+	.air-page .ir-final-cta .ir-dual-cta:has(> a:first-child:focus-visible) > a:last-child {
+		color: var(--ir-ink) !important;
+	}
+}
