@@ -122,3 +122,10 @@
 		color: var(--ir-ink) !important;
 	}
 }
+
+/* Review feedback: recruiter entry belongs below the homepage hero actions. */
+.ir-hero-inner > .recruiter-hero-note{grid-column:1 / -1;margin:0 0 20px!important;font-size:14px;line-height:1.6;color:#fff}
+.recruiter-hero-note a{font-weight:700;text-decoration:underline;text-underline-offset:3px}
+body.inspius-home-redesign-page .recruiter-hero-note{animation:irHomeHeroEnter 720ms 420ms cubic-bezier(.22,1,.36,1) both}
+.ir-page .ir-feature-icon.contract-count{font-size:24px;font-weight:800;line-height:1}
+.air-page #recruiter-workflow .ir-section-action{display:flex;justify-content:center;margin-top:24px}

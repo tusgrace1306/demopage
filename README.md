@@ -29,3 +29,5 @@ The expected URLs after Pages is enabled are:
 Forms are demonstrations and do not send or persist data. The Recruitment Service contact CTA opens the existing public inquiry page. Candidate actions and Login open the live application.
 
 The CSS and animation scripts in `assets/css/` and `assets/js/` come from the supplied Inspius theme. Content-specific styles are in `marketplace-content.css`. Original SVG origins are documented in `icon-provenance.json`.
+
+The storefront symbol uses the existing application’s Lucide Store icon; its license is in `assets/icons/LUCIDE-LICENSE.txt`.
